@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Parent is: $(ps -xp $PPID)"
+echo "PID is $$"
+trap "echo 'terminating'" SIGTERM TERM
+sleep 10
+
